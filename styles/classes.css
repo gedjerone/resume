@@ -1,0 +1,227 @@
+:root {
+    --text: #000000;
+    --bg: #fdfcfc;
+    --primary: #7c9546;
+    --secondary: #c5d8d8;
+    --accent: #59418b;
+    --shadow: rgba(89, 65, 139, .5);
+
+    --telegram: #23a0dc;
+    --discord: #5865f2;
+    --mastodon: #573ed1;
+
+    --default-border: 2px solid;
+    --default-border-radius-1: 10px;
+    --default-border-radius-2: 5px;
+
+    --default-gap-1: 3rem;
+    --default-gap-2: 2rem;
+    --default-gap-3: 1rem;
+
+    --default-margin-top-1: 24px;
+    --default-margin-top-2: 18px;
+    --default-margin-top-3: 8px;
+    --default-margin-top-4: 4px;
+
+    --default-margin-left-1: 24px;
+    --default-margin-left-2: 18px;
+    --default-margin-left-3: 16px;
+    --default-margin-left-4: 14px;
+    --default-margin-left-5: 8px;
+
+    --default-padding-body: 24px 20%;
+
+    --default-padding-1: 12px 24px;
+    --default-padding-2: 9px 18px;
+    --default-padding-3: 8px 16px;
+    --default-padding-4: 7px 14px;
+    --default-padding-5: 6px 12px;
+
+    --h1: 36px;
+    --h2: 32px;
+    --subtitle: 24px;
+    --p: 18px;
+    --sub: 16px;
+    --small: 14px;
+}
+
+.info {
+    margin-left: var(--default-margin-left-1);
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.cursive {
+    font-style: italic;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.mg-top-1 {
+    margin-top: var(--default-margin-top-1);
+}
+
+.mg-top-2 {
+    margin-top: var(--default-margin-top-2);
+}
+
+.mg-top-3 {
+    margin-top: var(--default-margin-top-3);
+}
+
+.mg-left-4 {
+    margin-left: var(--default-margin-left-4);
+}
+
+.socical-name {
+    margin-left: var(--default-margin-left-4);
+}
+
+.row-gr {
+    display: flex;
+}
+
+.gap-1 {
+    gap: var(--default-gap-1)
+}
+
+.gap-2 {
+    gap: var(--default-gap-2)
+}
+
+.gap-2 {
+    gap: var(--default-gap-3)
+}
+
+.wth-50 {
+    width: 50%;
+}
+
+.bgclr-primary {
+    background-color: var(--primary);
+}
+
+.bgclr-secondary {
+    background-color: var(--secondary);
+}
+
+.profile-photo {
+    border-radius: 100%;
+    display: flex;
+    height: auto;
+    max-width: 100%;
+    min-width: 210px;
+}
+
+.icon-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: var(--default-padding-5);
+    background-color: #212121;
+    border-radius: var(--default-border-radius-2);
+    transition: all ease 200ms;
+}
+
+.icon-links:hover .bi-telegram {
+    color: var(--telegram);
+}
+
+.icon-links:hover .bi-discord {
+    color: var(--discord);
+}
+
+.icon-links:hover .bi-mastodon {
+    color: var(--mastodon);
+}
+
+.shadow {
+    box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, .3);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 1;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--default-padding-1);
+    position: absolute;
+    top: 10%;
+    opacity: 0;
+    background-color: var(--bg);
+    border-radius: var(--default-border-radius-1);
+    z-index: 2;
+    animation: slideDown ease 600ms forwards;
+}
+
+@keyframes slideDown {
+    from {
+        top: 10%;
+        opacity: 0;
+    }
+    to {
+        top: 30%;
+        opacity: 1;
+    }
+}
+
+.modal-photo {
+    border-radius: 100%;
+    display: flex;
+    height: auto;
+    max-width: 64px;
+    min-width: 16px;
+}
+
+.flexible-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.flexible-dataframe {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: baseline;
+}
+
+.btn-close {
+    color: var(--text);
+    cursor: pointer;
+    align-self: baseline;
+}
+
+.modal-self-info {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--default-gap-3);
+}
+
+.bi-x-lg {
+    font-size: var(--subtitle);
+}
+
+.hidden {
+    display: none;
+}

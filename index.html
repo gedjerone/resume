@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta keywords="html, css, result, course, cv, resume">
+        <meta description="Maksim Volodin's CV">
+        <title>Maksim CV</title>
+        <link rel="stylesheet" href="styles/style.css">
+        <script defer type="text/javascript" src="scripts/apply-form.js"></script>
+    </head>
+    <body>
+        <div class="modal hidden">
+            <div class="flexible-container">
+                <div class="modal-self-info">
+                    <picture>
+                        <source srcset="public/photo-maks.avif" type="image/avif">
+                        <source srcset="public/photo-maks.webp" type="image/webp">
+                        <source srcset="public/photo-maks.jpg" type="image/jpeg">
+                        <img src="public/photo-maks.jpg" id="modal-photo" class="modal-photo" width="100px" alt="Максим Володин">
+                    </picture>
+                    <div class="modal-self-text">
+                        <h4>© Володин Максим 2023</h4>
+                        <p class="mg-top-4 cursive">Спасибо за обратную связь</p>
+                    </div>
+                </div>
+                <div class="btn-close" id="btn-close-modal"><i class="bi bi-x-lg"></i></div>
+            </div>
+            <h2 class="nowrap mg-top-3">Спасибо за обратную связь</h2>
+            <p class="mg-top-3">Данные никуда не отправлены</p>
+        </div>
+        <div class="overlay hidden"></div>
+        <header>
+            <picture>
+                <source srcset="public/photo-maks.avif" type="image/avif">
+                <source srcset="public/photo-maks.webp" type="image/webp">
+                <source srcset="public/photo-maks.jpg" type="image/jpeg">
+                <img src="public/photo-maks.jpg" id="main-photo" class="profile-photo shadow" width="250px" alt="Максим Володин">
+            </picture>
+            <div class="info">
+                <h1 class="nowrap">Володин Максим</h1>
+                <p class="cursive mg-top-3">Мне 22 года и я окончил вуз по специальности "Механика и математическое моделирование"</p>
+                <p class="cursive mg-top-3">Я пишу музыку и рисую граффити</p>
+                <h2 class="nowrap mg-top-3">Список социальных сетей</h2>
+                <div class="row-gr mg-top-3 gap-2 socicals">
+                    <div class="icon-links gap-3 shadow">
+                        <a href="https://t.me/gedjery" class="nowrap" target="_blank"><i class="bi bi-telegram"></i><span class="socical-name">Telegram</span></a>
+                    </div>
+                    <div class="icon-links gap-3 shadow">
+                        <a href="https://discordapp.com/users/837642618187808798" class="nowrap" target="_blank"><i class="bi bi-discord"></i><span class="socical-name">Discord</span></a>
+                    </div>
+                    <div class="icon-links gap-3 shadow">
+                        <a href="https://mastodon.social/@gedjerone" class="nowrap" target="_blank"><i class="bi bi-mastodon"></i><span class="socical-name">Mastodon</span></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section>
+                <article id="hobby" class="bgclr-primary mg-top-1 shadow">
+                    <h2>Мои хобби</h2>
+                    <ol class="mg-top-3">
+                        <li>Музыка</li>
+                        <li>Граффити</li>
+                        <li>Тату</li>
+                        <li>Рукопашный бой</li>
+                        <li>Акробатика</li>
+                    </ol>
+                </article>
+                <article id="work-exp" class="bgclr-secondary mg-top-1 shadow">
+                    <h2>Опыт работы</h2>
+                    <table class="mg-top-3">
+                        <thead>
+                            <tr>
+                                <th>Название</th>
+                                <th>Должность</th>
+                                <th>Год</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Название">Администрация города Липецка</td>
+                                <td data-label="Должность">Аналитик</td>
+                                <td class="nowrap" data-label="Год">2021-2021</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Название">Crypto freelance</td>
+                                <td data-label="Должность">Software developer</td>
+                                <td class="nowrap" data-label="Год">2021-2022</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Название">AlcorFinance Team</td>
+                                <td data-label="Должность">QA Automation</td>
+                                <td class="nowrap" data-label="Год">2022-2022</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+            </section>
+        </main>
+        <footer class="mg-top-1">
+            <h2>Связаться со мной</h2>
+            <form action="/" class="mg-top-3">
+                <div class="row-gr gap-1 col-mobile">
+                    <div class="wth-50">
+                        <label class="nowrap" for="name">Ваше имя: </label>
+                        <input type="text" id="name" placeholder="Введите имя">
+                    </div>
+                    <div class="wth-50">
+                        <label class="nowrap" for="email">Ваш email: </label>
+                        <input type="email" id="email" placeholder="Введите email">
+                    </div>
+                </div>
+                <div class="mg-top-1 .wth-100">
+                    <label class="nowrap" for="message">Ваше сообщение: </label>
+                    <textarea id="message" rows="3" placeholder="Введите сообщение..."></textarea>
+                </div>
+                <div>
+                    <button class="mg-top-2 shadow" id="btn-submit-form" type="submit">Отправить</button>
+                </div>
+            </form>
+        </footer>
+    </body>
+</html>
